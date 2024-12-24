@@ -259,7 +259,7 @@ a {
         margin-left: 0;
         margin-right: 0;
         margin-bottom: 10px;
-        width: auto; /* Permet au texte de s'ajuster à la largeur */
+        width: 90px; /* Permet au texte de s'ajuster à la largeur */
     }
 
     .tab-container {
@@ -280,7 +280,7 @@ a {
     }
 
     .nom {
-        width: auto; /* S'ajuste pour les petits écrans */
+        width: 70px; /* S'ajuste pour les petits écrans */
         text-align: center; /* Centre le texte */
     }
 
