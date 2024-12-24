@@ -42,6 +42,7 @@ body {
     width: 100%; /* Utilise toute la largeur disponible */
     margin-left: 0; /* Aucun décalage à gauche */
     margin-right: auto; /* Force les onglets à se centrer à gauche */
+    flex-wrap: wrap; /* Permet aux onglets de passer à la ligne */
 }
 
 /* Style pour les boutons d'onglet */
@@ -310,12 +311,16 @@ a {
     }
 
     .tab-container {
-        flex-direction: column; /* Empile les éléments */
-        align-items: center; /* Centre les éléments */
+        flex-direction: row; /* Les onglets sont sur une seule ligne */
+        flex-wrap: wrap; /* Permet aux onglets de passer à la ligne suivante */
+        justify-content: space-between; /* Ajoute de l'espace entre les éléments */
+        width: 100%; /* Occupe toute la largeur disponible */
     }
 
     .tab-button {
+        width: 45%; /* Chaque bouton occupe environ la moitié de la largeur */
         padding: 10px 12px; /* Réduit la taille des boutons */
         font-size: 12px; /* Réduit la taille de la police */
+        margin-bottom: 10px; /* Ajoute de l'espace entre les lignes */
     }
 }
