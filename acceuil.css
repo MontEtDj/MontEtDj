@@ -313,7 +313,7 @@ a {
     .tab-container {
         flex-direction: row; /* Les onglets sont sur une seule ligne */
         flex-wrap: wrap; /* Permet aux onglets de passer à la ligne suivante */
-        justify-content: space-between; /* Ajoute de l'espace entre les éléments */
+        justify-content: center; /* Centre tous les onglets */
         width: 100%; /* Occupe toute la largeur disponible */
     }
 
