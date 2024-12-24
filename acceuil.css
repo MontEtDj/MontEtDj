@@ -320,7 +320,7 @@ a {
     .tab-button {
         width: 45%; /* Chaque bouton occupe environ la moitié de la largeur */
         padding: 10px 12px; /* Réduit la taille des boutons */
-        font-size: 12px; /* Réduit la taille de la police */
+        font-size: 16px; /* Réduit la taille de la police */
         margin-bottom: 10px; /* Ajoute de l'espace entre les lignes */
     }
 }
