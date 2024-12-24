@@ -3,7 +3,6 @@ body {
     height: 100%;
     display: flex;
     flex-direction: column;
-    
     box-sizing: border-box;
     font-family: "Roboto", sans-serif;
 }
@@ -11,31 +10,41 @@ body {
 .banniere {
     background-color: #fcfcfc; /* Couleur de fond */
     display: flex;
-    align-items: center; /* Centre le contenu horizontalement */
+    align-items: center; /* Centre le contenu verticalement */
     height: 100px; /* Hauteur de la bannière */
+    justify-content: space-between; /* Espace entre les éléments */
+    padding: 10px 20px; /* Ajoute un peu d'espace intérieur */
+    flex-wrap: wrap; /* Permet au contenu de se replier sur plusieurs lignes si nécessaire */
 }
 
-/* Style pour le logo */
 .logo {
     width: 60px; /* Taille du logo */
     height: auto;
     margin-left: 80px;
     margin-bottom: 10px;
+    max-width: 100%; /* Garantit que l'image ne dépasse pas */
 }
 
-/* Style pour le nom de l'entreprise */
 .nom {
     width: 90px; /* Taille du logo */
     height: auto;
     margin-left: -30px;
     margin-right: 80px;
+    max-width: 100%; /* Garantit que le texte ne dépasse pas */
 }
 
 .tab-container {
     display: flex;
-    margin: 0px 20px;
+    justify-content: flex-start; /* Aligne les onglets à gauche */
+    align-items: center; /* Centre les onglets verticalement */
+    gap: 20px; /* Espace entre les onglets */
+    max-width: 800px; /* Limite la largeur du conteneur des onglets */
+    width: 100%; /* Utilise toute la largeur disponible */
+    margin-left: 0; /* Aucun décalage à gauche */
+    margin-right: auto; /* Force les onglets à se centrer à gauche */
 }
 
+/* Style pour les boutons d'onglet */
 .tab-button {
     background-color: transparent;
     font-size: 15px;
@@ -47,7 +56,6 @@ body {
     position: relative;
     transition: color 0.3s ease; /* Transition pour la couleur du texte */
 }
-
 
 .tab-button::after {
     content: '';
@@ -120,7 +128,6 @@ body {
 
 .banner-content {
     max-width: 600px;
-
 }
 
 .banner-content h2 {
@@ -131,7 +138,6 @@ body {
 .banner-content p {
     font-size: 1.2em;
 }
-
 
 /* Section des services */
 .services {
@@ -153,7 +159,7 @@ body {
 }
 
 .service-item {
-    background-color: #919191;
+    background-color: #3ac21f;
     padding: 20px;
     text-align: center;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -181,7 +187,7 @@ body {
 
 .contact p{
     font-size: 18px;
-    color: red;
+    color: white;
 }
 
 /* Pied de page */
@@ -231,95 +237,85 @@ a {
     transform: rotate(180deg);
 }
 
-
 /* Media Queries pour la responsivité */
 
 /* Écrans de largeur maximale de 1024px (tablettes) */
 @media (max-width: 1024px) {
     .banniere {
-        flex-wrap: wrap;
-        justify-content: center;
-        padding: 10px;
+        height: auto; /* La hauteur s'adapte automatiquement */
+        flex-direction: column; /* Empile les éléments verticalement sur les petits écrans */
+        align-items: center; /* Centre les éléments */
+    }
+
+    .logo {
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 10px;
+        width: 50px; /* Réduit la taille du logo pour les petits écrans */
+    }
+
+    .nom {
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 10px;
+        width: auto; /* Permet au texte de s'ajuster à la largeur */
     }
 
     .tab-container {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
-    }
-
-    .service-grid {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-    }
-
-    .service-item {
-        max-width: 80%;
+        flex-direction: column; /* Empile les boutons verticalement */
+        align-items: center; /* Centre les boutons */
     }
 }
 
 /* Écrans de largeur maximale de 768px (petites tablettes et grands téléphones) */
 @media (max-width: 768px) {
-    .banner {
-        padding: 40px 20px;
+    .banniere {
+        padding: 20px; /* Un peu plus de padding pour les petits écrans */
+        height: auto; /* La hauteur s'ajuste automatiquement */
     }
 
-    .banner-content h2 {
-        font-size: 2em;
+    .logo {
+        width: 50px; /* Taille réduite pour les très petits écrans */
     }
 
-    .banner-content p {
-        font-size: 1em;
+    .nom {
+        width: auto; /* S'ajuste pour les petits écrans */
+        text-align: center; /* Centre le texte */
     }
 
     .tab-container {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column; /* Empile les éléments */
+        align-items: center; /* Centre les éléments */
     }
 
     .tab-button {
-        padding: 10px 15px;
-        font-size: 14px;
+        padding: 10px 15px; /* Réduit la taille des boutons */
+        font-size: 14px; /* Réduit la taille de la police */
     }
 }
 
 /* Écrans de largeur maximale de 480px (téléphones) */
 @media (max-width: 480px) {
     .banniere {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+        padding: 10px; /* Moins de padding pour les très petits écrans */
     }
 
     .logo {
-        margin: 0 auto;
-        width: 50px;
+        width: 50px; /* Taille réduite du logo */
     }
 
     .nom {
-        margin: 10px 0;
-        width: 70px;
+        width: 70px; /* Ajuste la largeur du texte */
+        text-align: center; /* Centre le texte */
     }
 
-    .service-item {
-        max-width: 90%;
-        padding: 15px;
+    .tab-container {
+        flex-direction: column; /* Empile les éléments */
+        align-items: center; /* Centre les éléments */
     }
 
-    .banner-content h2 {
-        font-size: 1.8em;
-    }
-
-    .banner-content p {
-        font-size: 0.9em;
-    }
-
-    .contact {
-        padding: 15px;
-    }
-
-    .contact p {
-        font-size: 14px;
+    .tab-button {
+        padding: 10px 12px; /* Réduit la taille des boutons */
+        font-size: 12px; /* Réduit la taille de la police */
     }
 }
