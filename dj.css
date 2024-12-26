@@ -299,3 +299,91 @@ a {
     width: 90%;
     height: 60%;
 }
+
+
+/* Media Queries pour la responsivité */
+
+/* Écrans de largeur maximale de 1024px (tablettes) */
+@media (max-width: 1024px) {
+    .banniere {
+        height: auto; /* La hauteur s'adapte automatiquement */
+        flex-direction: column; /* Empile les éléments verticalement sur les petits écrans */
+        align-items: center; /* Centre les éléments */
+    }
+
+    .logo {
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 10px;
+        width: 50px; /* Réduit la taille du logo pour les petits écrans */
+    }
+
+    .nom {
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 10px;
+        width: 90px; /* Permet au texte de s'ajuster à la largeur */
+    }
+
+    .tab-container {
+        flex-direction: column; /* Empile les boutons verticalement */
+        align-items: center; /* Centre les boutons */
+    }
+}
+
+/* Écrans de largeur maximale de 768px (petites tablettes et grands téléphones) */
+@media (max-width: 768px) {
+    .banniere {
+        padding: 20px; /* Un peu plus de padding pour les petits écrans */
+        height: auto; /* La hauteur s'ajuste automatiquement */
+    }
+
+    .logo {
+        width: 50px; /* Taille réduite pour les très petits écrans */
+    }
+
+    .nom {
+        width: 70px; /* S'ajuste pour les petits écrans */
+        text-align: center; /* Centre le texte */
+    }
+
+    .tab-container {
+        flex-direction: column; /* Empile les éléments */
+        align-items: center; /* Centre les éléments */
+    }
+
+    .tab-button {
+        padding: 10px 15px; /* Réduit la taille des boutons */
+        font-size: 14px; /* Réduit la taille de la police */
+    }
+}
+
+/* Écrans de largeur maximale de 480px (téléphones) */
+@media (max-width: 480px) {
+    .banniere {
+        padding: 10px; /* Moins de padding pour les très petits écrans */
+    }
+
+    .logo {
+        width: 50px; /* Taille réduite du logo */
+    }
+
+    .nom {
+        width: 70px; /* Ajuste la largeur du texte */
+        text-align: center; /* Centre le texte */
+    }
+
+    .tab-container {
+        flex-direction: row; /* Les onglets sont sur une seule ligne */
+        flex-wrap: wrap; /* Permet aux onglets de passer à la ligne suivante */
+        justify-content: center; /* Centre tous les onglets */
+        width: 100%; /* Occupe toute la largeur disponible */
+    }
+
+    .tab-button {
+        width: 45%; /* Chaque bouton occupe environ la moitié de la largeur */
+        padding: 10px 12px; /* Réduit la taille des boutons */
+        font-size: 16px; /* Réduit la taille de la police */
+        margin-bottom: 10px; /* Ajoute de l'espace entre les lignes */
+    }
+}
