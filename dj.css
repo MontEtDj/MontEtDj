@@ -1,3 +1,4 @@
+/* Général */
 body, html {
     overflow-x: hidden; /* Empêche le défilement horizontal */
     margin: 0;
@@ -17,7 +18,7 @@ body, html {
     margin-bottom: 40px;
 }
 
-.contact p{
+.contact p {
     font-size: 18px;
     color: white;
 }
@@ -75,7 +76,7 @@ a {
     box-sizing: border-box; /* Inclut le padding dans la largeur */
 }
 
-/* Image dans le matériel */
+/* Images dans les services */
 .materiel-item img {
     width: 100%; /* L'image prend toute la largeur du conteneur */
     height: auto; /* Garde les proportions */
@@ -142,12 +143,12 @@ a {
     font-family: Bung Spice;
 }
 
-#services-dj h2{
-    font-size: 40px;  
+#services-dj h2 {
+    font-size: 40px;
     font-family: Bunge Spice;
 }
 
-#services-dj .service-description-dj p{
+#services-dj .service-description-dj p {
     font-size: 23px;
     font-family: Ga Mamli;
     text-align: center;
@@ -171,13 +172,13 @@ a {
     z-index: -1;
 }
 
-#hero-dj h1{
+#hero-dj h1 {
     font-size: 80px;
     margin-bottom: -10px;
     font-family: fantas;
 }
 
-#hero-dj p{
+#hero-dj p {
     font-size: 30px;
     font-family: Ga Mamli;
 }
@@ -247,7 +248,7 @@ a {
 }
 
 .materiel-item:hover {
-    transform: scale(1.05)
+    transform: scale(1.05);
 }
 
 .materiel-item img {
@@ -277,12 +278,12 @@ a {
     height: 60%;
 }
 
-.service-item-dj .Pl{
+.service-item-dj .Pl {
     width: 100%;
     height: auto;
 }
 
-.service-item-dj .Plm{
+.service-item-dj .Plm {
     width: 90%;
     height: 60%;
 }
