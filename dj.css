@@ -1,6 +1,4 @@
-/* Général */
-body, html {
-    overflow-x: hidden; /* Empêche le défilement horizontal */
+body {
     margin: 0;
     padding: 0;
     font-family: "Roboto", sans-serif;
@@ -18,9 +16,9 @@ body, html {
     margin-bottom: 40px;
 }
 
-.contact p {
+.contact p{
     font-size: 18px;
-    color: green;
+    color: white;
 }
 
 /* Pied de page */
@@ -41,24 +39,28 @@ a {
     display: flex;
     align-items: center;
     height: 100px;
-    flex-wrap: wrap; /* Permet de s'adapter à l'écran */
-    justify-content: center; /* Centre les éléments */
-    padding: 0 10px; /* Ajoute du padding pour éviter les débordements */
 }
 
-/* Logo */
-.logo, .nom {
-    max-width: 100%; /* Assure que le logo et le texte ne dépassent pas */
+/* Style pour le logo */
+.logo {
+    width: 60px;
     height: auto;
+    margin-left: 80px;
     margin-bottom: 10px;
+}
+
+/* Style pour le nom de l'entreprise */
+.nom {
+    width: 90px;
+    height: auto;
+    margin-left: -30px;
+    margin-right: 80px;
 }
 
 /* Container des onglets */
 .tab-container {
     display: flex;
-    margin: 0;
-    justify-content: center; /* Centre les onglets */
-    flex-wrap: wrap; /* Permet aux éléments de se réorganiser sur les petits écrans */
+    margin: 0px 20px;
 }
 
 /* Boutons des onglets */
@@ -67,101 +69,35 @@ a {
     font-size: 15px;
     border: none;
     padding: 20px 25px;
-    margin: 5px;
+    margin: 0 5px;
     cursor: pointer;
     border-radius: 5px;
     position: relative;
     transition: color 0.3s ease;
-    width: 100%; /* Prend toute la largeur sur les petits écrans */
-    box-sizing: border-box; /* Inclut le padding dans la largeur */
 }
 
-/* Images dans les services */
-.materiel-item img {
-    width: 100%; /* L'image prend toute la largeur du conteneur */
-    height: auto; /* Garde les proportions */
-    object-fit: contain; /* Préserve les proportions sans déformation */
-    max-width: 100%; /* Evite que l'image dépasse */
+.tab-button::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #4285f4;
+    transition: width 0.3s ease;
 }
 
-/* Container des services */
-.service-list-dj {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 10px;
+/* Effet de survol : soulignement */
+.tab-button:hover::after {
+    width: 100%;
 }
 
-.service-item-dj {
-    width: 100%; /* S'ajuste sur les petits écrans */
-    max-width: 300px; /* Limite la largeur maximale */
-    margin-bottom: 30px;
-    text-align: center;
-    padding: 10px;
-    box-sizing: border-box;
+/* Effet de survol : changement de couleur du texte */
+.tab-button:hover {
+    color: #4285f4;
 }
 
-/* Section des services */
-#services-dj {
-    padding: 25px 20px;
-    text-align: center;
-    background-color: #000000;
-    color: #d1d1d1;
-    margin-bottom: -5%;
-}
-
-.service-description-dj p {
-    background-size: cover;
-    padding: 10px 0;
-    margin-left: 20px;
-    position: relative;
-    z-index: 1;
-    color: #ff0000;
-}
-
-.service-list-dj {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.service-item-dj {
-    width: 30%;
-    margin-bottom: 30px;
-    text-align: center;
-}
-
-.service-item-dj h3 {
-    font-size: 30px;
-    color: #ff0000;
-    font-weight: bold;
-}
-
-.service-item-dj p {
-    font-size: 23px;
-    color: #d50000;
-    font-family: Bung Spice;
-}
-
-#services-dj h2 {
-    font-size: 40px;
-    font-family: Bunge Spice;
-}
-
-#services-dj .service-description-dj p {
-    font-size: 23px;
-    font-family: Ga Mamli;
-    text-align: center;
-}
-
-/* Hero section */
-#hero-dj {
-    background-size: cover;
-    padding: 20px 35px;
-    color: rgb(255, 255, 255);
-    z-index: 1;
-}
-
+/* Vidéo en arrière-plan */
 .background-video {
     position: fixed;
     top: 0;
@@ -172,18 +108,53 @@ a {
     z-index: -1;
 }
 
-#hero-dj h1 {
-    font-size: 80px;
-    margin-bottom: -10px;
-    font-family: fantas;
+/* Section Hero */
+#hero {
+    background-size: cover;
+    padding: 10px 0;
+    color: rgb(255, 255, 255);
+    margin-left: 20px;
+    position: relative;
+    z-index: 1;
+    padding: 20px;
 }
 
-#hero-dj p {
-    font-size: 30px;
-    font-family: Ga Mamli;
+/* Liste des services */
+.service-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
-/* Contenu du menu déroulant */
+.service-item {
+    width: 30%;
+    margin-bottom: 40px;
+    margin-top: 50px;
+}
+
+.service-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Section des services */
+#services {
+    padding: 15px 10px;
+    text-align: center;
+    background-color: #f1f1f1;
+}
+
+.service-description p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #333;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Menu déroulant */
 .dropdown-content {
     display: none;
     position: absolute;
@@ -215,77 +186,30 @@ a {
     transform: rotate(180deg);
 }
 
-/* Materiel */
-#materiel-dj {
-    text-align: center;
-    padding: 20px;
-    background-color: #000000;
-    color: #500000;
+/* Taille des titres */
+h1 {
+    font-size: 80px;
+    margin-bottom: -10px;
+    font-family: fantas;
+}
+
+.service-description p {
     font-size: 30px;
+    font-family: Ga Mamli;
 }
 
-.materiel-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 20px;
+#services h2 {
+    font-size: 40px;
+    font-family: Bunge Spice;
 }
 
-.materiel-item {
-    width: 220px;
-    height: 300px;
-    text-align: center;
-    background-color: #ffffff;
-    border: 1px solid #777777;
-    border-radius: 8px;
-    padding: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+#services p {
+    font-size: 23px;
+    font-family: Bung Spice;
 }
 
-.materiel-item:hover {
-    transform: scale(1.05);
-}
-
-.materiel-item img {
-    width: 100%; /* L'image prend toute la largeur du conteneur */
-    height: auto;
-    max-width: 100%; /* Evite que l'image dépasse */
-    object-fit: contain; /* Maintient les proportions */
-    display: block;
-    margin: 0 auto;
-}
-
-.materiel-item h3 {
-    font-size: 20px;
-    margin: 8px 0 5px;
-    color: #555;
-}
-
-.materiel-item p {
-    font-size: 16px;
-    color: #777;
-    line-height: 1.4;
-}
-
-/* Réduction spécifique pour certaines images */
-.resize-standard {
-    object-fit: contain;
-    height: 60%;
-}
-
-.service-item-dj .Pl {
-    width: 100%;
-    height: auto;
-}
-
-.service-item-dj .Plm {
-    width: 90%;
-    height: 60%;
+h3 {
+    font-size: 30px;
 }
 
 /* Media Queries pour la responsivité */
