@@ -1,15 +1,6 @@
-/* Réinitialisation des marges et paddings */
-* {
+body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-/* Corps de la page */
-html, body {
-    width: 100%;
-    height: 100%;
-    overflow-x: hidden; /* Empêche le débordement horizontal */
     font-family: "Roboto", sans-serif;
 }
 
@@ -43,16 +34,15 @@ a {
 }
 
 .banniere {
-    background-color: #fcfcfc; /* Couleur de fond */
+    background-color: #fcfcfc;
     display: flex;
-    align-items: center; /* Centre le contenu horizontalement */
-    width: 100vw; /* Prend toute la largeur de l'écran */
-    height: 100px; /* Hauteur de la bannière */
+    align-items: center;
+    height: 100px;
 }
 
 /* Style pour le logo */
 .logo {
-    width: 60px; /* Taille du logo */
+    width: 60px;
     height: auto;
     margin-left: 80px;
     margin-bottom: 10px;
@@ -60,7 +50,7 @@ a {
 
 /* Style pour le nom de l'entreprise */
 .nom {
-    width: 90px; /* Taille du logo */
+    width: 90px;
     height: auto;
     margin-left: -30px;
     margin-right: 80px;
@@ -69,9 +59,6 @@ a {
 .tab-container {
     display: flex;
     margin: 0px 20px;
-    flex-wrap: wrap; /* Permet aux éléments de se réorganiser */
-    justify-content: center; /* Centre les éléments */
-    width: 100%; /* Assure que le conteneur occupe toute la largeur disponible */
 }
 
 .tab-button {
@@ -83,45 +70,45 @@ a {
     cursor: pointer;
     border-radius: 5px;
     position: relative;
-    transition: color 0.3s ease; /* Transition pour la couleur du texte */
+    transition: color 0.3s ease;
 }
 
 .tab-button::after {
     content: '';
     position: absolute;
-    bottom: 0; /* Place l'élément souligné juste en bas du texte */
+    bottom: 0;
     left: 0;
     width: 0;
-    height: 2px; /* Épaisseur du soulignement */
-    background-color: #4285f4; /* Couleur du soulignement */
-    transition: width 0.3s ease; /* Transition pour l'animation d'élargissement */
+    height: 2px;
+    background-color: #4285f4;
+    transition: width 0.3s ease;
 }
 
 /* Effet de survol : soulignement */
 .tab-button:hover::after {
-    width: 100%; /* L'élément prend la largeur totale du bouton au survol */
+    width: 100%;
 }
 
 /* Effet de survol : changement de couleur du texte */
 .tab-button:hover {
-    color: #4285f4; /* Change la couleur du texte au survol */
+    color: #4285f4;
 }
 
 #hero-dj {
     background-size: cover;
     padding: 20px 35px;
     color: rgb(255, 255, 255);
-    z-index: 1;             /* Assure que le texte est devant la vidéo */  
+    z-index: 1;
 }
 
 .background-video {
-    position: fixed;        /* Fixe la vidéo en arrière-plan */
-    top: 0;                 /* Alignement au haut de la page */
-    left: 0;                /* Alignement à gauche de la page */
-    width: 100vw;           /* Prend toute la largeur de la fenêtre */
-    height: 100vh;          /* Prend toute la hauteur de la fenêtre */
-    object-fit: cover;      /* Couvre toute la fenêtre sans déformer la vidéo */
-    z-index: -1;            /* La vidéo est en arrière-plan */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
 }
 
 #services-dj {
@@ -136,8 +123,8 @@ a {
     background-size: cover;
     padding: 10px 0;
     margin-left: 10px;
-    position: relative;     /* Le contenu se place par-dessus la vidéo */
-    z-index: 1;             /* Assure que le texte est devant la vidéo */    
+    position: relative;
+    z-index: 1;
     color: #ff0000;
 }
 
@@ -187,7 +174,6 @@ a {
     font-family: Ga Mamli;
 }
 
-/* Contenu du menu déroulant (masqué par défaut) */
 .dropdown-content {
     display: none;
     position: absolute;
@@ -199,7 +185,6 @@ a {
     text-align: left;
 }
 
-/* Liens du menu déroulant */
 .dropdown-content a {
     color: black;
     padding: 12px 16px;
@@ -212,12 +197,10 @@ a {
     background-color: #ddd;
 }
 
-/* Affichage du menu lors du survol */
 .dropdown:hover .dropdown-content {
     display: block;
 }
 
-/* Effet d'inclinaison du triangle lors du survol */
 .dropdown:hover .triangle {
     transform: rotate(180deg);
 }
@@ -239,9 +222,8 @@ a {
 }
 
 .materiel-item {
-    width: 100%; /* Assure que l'élément ne dépasse pas */
-    max-width: 220px; /* Limite la largeur */
-    height: 300px; /* Uniformisation de la hauteur */
+    width: 220px;
+    height: 300px;
     text-align: center;
     background-color: #ffffff;
     border: 1px solid #777777;
@@ -262,8 +244,8 @@ a {
     width: auto;
     height: auto;
     max-width: 100%;
-    max-height: 140px; /* Taille maximum commune */
-    object-fit: contain; /* Maintient les proportions sans déformation */
+    max-height: 140px;
+    object-fit: contain;
     display: block;
     margin: 0 auto;
 }
@@ -280,10 +262,9 @@ a {
     line-height: 1.4;
 }
 
-/* Réduction spécifique pour certaines images */
 .resize-standard {
-    object-fit: contain; /* Préserve les proportions sans recadrage */
-    height: 60%; /* Hauteur ajustée pour réduire la taille */
+    object-fit: contain;
+    height: 60%;
 }
 
 .service-item-dj .Pl{
@@ -301,85 +282,126 @@ a {
 /* Écrans de largeur maximale de 1024px (tablettes) */
 @media (max-width: 1024px) {
     .banniere {
-        height: auto; /* La hauteur s'adapte automatiquement */
-        flex-direction: column; /* Empile les éléments verticalement sur les petits écrans */
-        align-items: center; /* Centre les éléments */
+        height: auto;
+        flex-direction: column;
+        align-items: center;
     }
 
     .logo {
         margin-left: 0;
         margin-right: 0;
         margin-bottom: 10px;
-        width: 50px; /* Réduit la taille du logo pour les petits écrans */
+        width: 50px;
     }
 
     .nom {
         margin-left: 0;
         margin-right: 0;
         margin-bottom: 10px;
-        width: 90px; /* Permet au texte de s'ajuster à la largeur */
+        width: 90px;
     }
 
     .tab-container {
-        flex-direction: column; /* Empile les boutons verticalement */
-        align-items: center; /* Centre les boutons */
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tab-button {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+
+    #hero-dj h1 {
+        font-size: 60px;
+    }
+
+    #hero-dj p {
+        font-size: 24px;
     }
 }
 
 /* Écrans de largeur maximale de 768px (petites tablettes et grands téléphones) */
 @media (max-width: 768px) {
     .banniere {
-        padding: 20px; /* Un peu plus de padding pour les petits écrans */
-        height: auto; /* La hauteur s'ajuste automatiquement */
+        padding: 20px;
+        height: auto;
     }
 
     .logo {
-        width: 50px; /* Taille réduite pour les très petits écrans */
+        width: 50px;
     }
 
     .nom {
-        width: 70px; /* S'ajuste pour les petits écrans */
-        text-align: center; /* Centre le texte */
+        width: 70px;
+        text-align: center;
     }
 
     .tab-container {
-        flex-direction: column; /* Empile les éléments */
-        align-items: center; /* Centre les éléments */
+        flex-direction: column;
+        align-items: center;
     }
 
     .tab-button {
-        padding: 10px 15px; /* Réduit la taille des boutons */
-        font-size: 14px; /* Réduit la taille de la police */
+        padding: 10px 15px;
+        font-size: 14px;
     }
-    
+
+    #hero-dj h1 {
+        font-size: 50px;
+    }
+
+    #hero-dj p {
+        font-size: 22px;
+    }
 }
 
 /* Écrans de largeur maximale de 480px (téléphones) */
 @media (max-width: 480px) {
     .banniere {
-        padding: 10px; /* Moins de padding pour les très petits écrans */
+        padding: 10px;
     }
 
     .logo {
-        width: 50px; /* Taille réduite du logo */
+        width: 50px;
     }
 
     .nom {
-        width: 70px; /* Ajuste la largeur du texte */
-        text-align: center; /* Centre le texte */
+        width: 70px;
+        text-align: center;
     }
 
     .tab-container {
-        flex-direction: row; /* Les onglets sont sur une seule ligne */
-        flex-wrap: wrap; /* Permet aux onglets de passer à la ligne suivante */
-        justify-content: center; /* Centre tous les onglets */
-        width: 100%; /* Occupe toute la largeur disponible */
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
     }
 
     .tab-button {
-        width: 45%; /* Chaque bouton occupe environ la moitié de la largeur */
-        padding: 10px 12px; /* Réduit la taille des boutons */
-        font-size: 16px; /* Réduit la taille de la police */
-        margin-bottom: 10px; /* Ajoute de l'espace entre les lignes */
+        width: 45%;
+        padding: 10px 12px;
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    #hero-dj h1 {
+        font-size: 40px;
+    }
+
+    #hero-dj p {
+        font-size: 18px;
+    }
+
+    .service-item-dj h3 {
+        font-size: 20px;
+    }
+
+    .service-item-dj p {
+        font-size: 16px;
+    }
+
+    .materiel-item {
+        width: 45%;
+        height: 250px;
     }
 }
