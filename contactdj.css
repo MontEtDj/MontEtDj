@@ -8,7 +8,7 @@ html, body {
     background-size: cover;
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Alignement du contenu vers le haut */
+    align-items: center; /* Centrer le contenu verticalement */
     flex-direction: column; /* Aligner les éléments verticalement */
 }
 
@@ -82,34 +82,42 @@ html, body {
 /* Conteneur principal pour le formulaire et autres sections */
 .main-container {
     background-color: rgba(255, 255, 255, 0.9);
-    padding: 60px 40px; /* Espace du formulaire avec plus d'espacement haut et bas */
+    padding: 2vw;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 40vw;
     max-width: 600px;
-    width: 100%;
-    margin: 0;  /* Supprimer les marges pour utiliser flexbox */
-    position: absolute;  /* Permet de positionner précisément le formulaire */
-    flex: 1 0 auto;  /* Permet au formulaire de se redimensionner si nécessaire */
-    top: 50%;  /* Placer au centre de la page */
-    left: 50%;  /* Placer au centre de la page */
-    transform: translate(-50%, -50%); /* Ajuste le formulaire pour le centrer exactement */
-    margin-top: 43%;
-
-  }
-  
+    min-width: 300px;
+    margin-top:238vh; /* Ajoute de l'espace en haut */
+    margin-bottom: auto;
+    position: relative;
+    transform: translateY(0); /* Centré sans décalage */
+    transition: width 0.3s ease, padding 0.3s ease;
+}
 
 /* Titres */
 h1 {
     text-align: center;
     color: #333;
-    font-size: 35px;
-    margin-top: -25px;
+    font-size: 2rem;
+    margin-bottom: 1rem;
     font-weight: bold;
 }
 
 h2, h3 {
     color: #555;
     margin-top: 20px;
+}
+
+.forfaits {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+label {
+    margin: 15px 0;
+    display: flex;
 }
 
 /* Forfaits et Options */
@@ -149,16 +157,11 @@ label {
     background-color: rgb(255, 255, 255);
 }
 
-/* Prix total */
-#totalPrice {
-    font-weight: bold;
-    color: #8b00a4;
-}
-
 /* Formulaire de contact */
 .contact-form form {
     display: flex;
     flex-direction: column;
+    gap: 1rem;
 }
 
 .contact-form .form-group {
@@ -172,24 +175,25 @@ label {
 
 .contact-form input, .contact-form textarea {
     width: 100%;
-    padding: 10px;
+    padding: 1rem;
     border: 1px solid #ccc;
     border-radius: 4px;
-    font-size: 16px;
+    font-size: 1rem;
+    box-sizing: border-box;
 }
 
 .contact-form textarea {
     resize: vertical;
-    height: 100px;
+    height: 5rem;
 }
 
 #sendEmailButton {
     background-color: #8b00a4;
     color: white;
-    padding: 10px 20px;
+    padding: 0.8rem;
     border: none;
     border-radius: 4px;
-    font-size: 16px;
+    font-size: 1rem;
     cursor: pointer;
     text-align: center;
 }
@@ -238,7 +242,7 @@ a {
     text-decoration: none;
 }
 
-/* Contenu du menu déroulant (masqué par défaut) */
+/* Contenu du menu déroulant */
 .dropdown-content {
     display: none;
     position: absolute;
@@ -250,7 +254,6 @@ a {
     text-align: left;
 }
 
-/* Liens du menu déroulant */
 .dropdown-content a {
     color: black;
     padding: 12px 16px;
@@ -263,12 +266,10 @@ a {
     background-color: #ddd;
 }
 
-/* Affichage du menu lors du survol */
 .dropdown:hover .dropdown-content {
     display: block;
 }
 
-/* Effet d'inclinaison du triangle lors du survol */
 .dropdown:hover .triangle {
     transform: rotate(180deg);
 }
@@ -301,10 +302,28 @@ a {
         flex-direction: column; /* Empile les boutons verticalement */
         align-items: center; /* Centre les boutons */
     }
+
+    .main-container {
+        margin-top: 100vh; /* Ajuste l'espace au-dessus du formulaire */
+    }
 }
 
 /* Écrans de largeur maximale de 768px (petites tablettes et grands téléphones) */
 @media (max-width: 768px) {
+    .main-container {
+        width: 60vw;
+        padding: 4vw;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    #sendEmailButton {
+        font-size: 0.9rem;
+        padding: 0.6rem;
+    }
+
     .banniere {
         padding: 20px; /* Un peu plus de padding pour les petits écrans */
         height: auto; /* La hauteur s'ajuste automatiquement */
@@ -320,13 +339,21 @@ a {
     }
 
     .tab-container {
-        flex-direction: column; /* Empile les éléments */
-        align-items: center; /* Centre les éléments */
+        flex-direction: row; /* Les onglets sont sur une seule ligne */
+        flex-wrap: wrap; /* Permet aux onglets de passer à la ligne suivante */
+        justify-content: center; /* Centre tous les onglets */
+        width: 100%; /* Occupe toute la largeur disponible */
     }
 
     .tab-button {
         padding: 10px 15px; /* Réduit la taille des boutons */
         font-size: 14px; /* Réduit la taille de la police */
+        margin-bottom: 10px; /* Ajoute de l'espace entre les lignes */
+        width: 45%; /* Chaque bouton occupe environ la moitié de la largeur */
+    }
+
+    .main-container {
+        margin-top: 1600px;
     }
 }
 
@@ -357,5 +384,9 @@ a {
         padding: 10px 12px; /* Réduit la taille des boutons */
         font-size: 16px; /* Réduit la taille de la police */
         margin-bottom: 10px; /* Ajoute de l'espace entre les lignes */
+    }
+
+    .main-container {
+        margin-top: 1500px;
     }
 }
