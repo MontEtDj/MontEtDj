@@ -402,6 +402,6 @@ a {
 
     .materiel-item {
         width: 45%;
-        height: 250px;
+        height: auto;
     }
 }
