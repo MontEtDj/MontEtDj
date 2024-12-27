@@ -8,9 +8,8 @@ html, body {
     background-size: cover;
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Alignement du contenu vers le haut */
-    flex-direction: column; /* Aligner les éléments verticalement */
-    justify-content: space-between;  /* Crée un espace uniforme entre les éléments */
+    align-items: center;
+    flex-direction: column;
 }
 
 /* Bannière */
@@ -19,16 +18,16 @@ html, body {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #fcfcfc; /* Couleur de fond de la bannière */
+    background-color: #fcfcfc;
     display: flex;
-    align-items: center; /* Centrer le contenu verticalement */
-    height: 100px; /* Hauteur de la bannière */
-    z-index: 10; /* S'assurer que la bannière est au-dessus du reste */
+    align-items: center;
+    height: 100px;
+    z-index: 10;
 }
 
 /* Logo dans la bannière */
 .logo {
-    width: 60px; /* Taille du logo */
+    width: 60px;
     height: auto;
     margin-left: 80px;
     margin-bottom: 10px;
@@ -36,7 +35,7 @@ html, body {
 
 /* Nom de l'entreprise dans la bannière */
 .nom {
-    width: 90px; /* Taille du logo */
+    width: 90px;
     height: auto;
     margin-left: -30px;
     margin-right: 80px;
@@ -57,7 +56,7 @@ html, body {
     cursor: pointer;
     border-radius: 5px;
     position: relative;
-    transition: color 0.3s ease; /* Transition pour la couleur du texte */
+    transition: color 0.3s ease;
 }
 
 .tab-button::after {
@@ -67,43 +66,40 @@ html, body {
     left: 0;
     width: 0;
     height: 2px;
-    background-color: #4285f4; /* Couleur du soulignement */
+    background-color: #4285f4;
     transition: width 0.3s ease;
 }
 
-/* Effet de survol pour le bouton */
 .tab-button:hover::after {
-    width: 100%; /* Soulignement au survol */
+    width: 100%;
 }
 
 .tab-button:hover {
-    color: #4285f4; /* Changement de couleur au survol */
+    color: #4285f4;
 }
 
-/* Conteneur principal pour le formulaire et autres sections */
+/* Conteneur principal pour le formulaire */
 .main-container {
     background-color: rgba(255, 255, 255, 0.9);
-    padding: 60px 40px; /* Espace du formulaire avec plus d'espacement haut et bas */
+    padding: 2vw;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 40vw;
     max-width: 600px;
-    width: 100%;
-    margin: 0;  /* Supprimer les marges pour utiliser flexbox */
-    position: absolute;  /* Permet de positionner précisément le formulaire */
-    flex: 1 0 auto;  /* Permet au formulaire de se redimensionner si nécessaire */
-    top: 50%;  /* Placer au centre de la page */
-    left: 50%;  /* Placer au centre de la page */
-    transform: translate(-50%, -50%); /* Ajuste le formulaire pour le centrer exactement */
-    margin-top: 30%;
-  }
-  
+    min-width: 300px;
+    margin-top: 160vh; /* Ajoute de l'espace en haut */
+    margin-bottom: auto;
+    position: relative;
+    transform: translateY(0); /* Centré sans décalage */
+    transition: width 0.3s ease, padding 0.3s ease;
+}
 
 /* Titres */
 h1 {
     text-align: center;
     color: #333;
-    font-size: 35px;
-    margin-top: -25px;
+    font-size: 2rem;
+    margin-bottom: 1rem;
     font-weight: bold;
 }
 
@@ -112,9 +108,7 @@ h2, h3 {
     margin-top: 20px;
 }
 
-
-
-.forfaits{
+.forfaits {
     text-align: center;
     font-size: 20px;
     margin-bottom: 15px;
@@ -125,13 +119,11 @@ label {
     display: flex;
 }
 
-
 /* Classe pour changer la couleur du bouton */
 .white {
     background-color: rgb(184, 184, 184) !important;
 }
 
-/* Couleur de fond par défaut pour les boutons non sélectionnés */
 .optionButton:not(.white) {
     background-color: rgb(255, 255, 255);
 }
@@ -146,6 +138,7 @@ label {
 .contact-form form {
     display: flex;
     flex-direction: column;
+    gap: 1rem;
 }
 
 .contact-form .form-group {
@@ -159,24 +152,25 @@ label {
 
 .contact-form input, .contact-form textarea {
     width: 100%;
-    padding: 10px;
+    padding: 1rem;
     border: 1px solid #ccc;
     border-radius: 4px;
-    font-size: 16px;
+    font-size: 1rem;
+    box-sizing: border-box;
 }
 
 .contact-form textarea {
     resize: vertical;
-    height: 100px;
+    height: 5rem;
 }
 
 #sendEmailButton {
     background-color: #8b00a4;
     color: white;
-    padding: 10px 20px;
+    padding: 0.8rem;
     border: none;
     border-radius: 4px;
-    font-size: 16px;
+    font-size: 1rem;
     cursor: pointer;
     text-align: center;
 }
@@ -225,7 +219,7 @@ a {
     text-decoration: none;
 }
 
-/* Contenu du menu déroulant (masqué par défaut) */
+/* Contenu du menu déroulant */
 .dropdown-content {
     display: none;
     position: absolute;
@@ -237,7 +231,6 @@ a {
     text-align: left;
 }
 
-/* Liens du menu déroulant */
 .dropdown-content a {
     color: black;
     padding: 12px 16px;
@@ -250,15 +243,43 @@ a {
     background-color: #ddd;
 }
 
-/* Affichage du menu lors du survol */
 .dropdown:hover .dropdown-content {
     display: block;
 }
 
-/* Effet d'inclinaison du triangle lors du survol */
 .dropdown:hover .triangle {
     transform: rotate(180deg);
 }
+
+/* Responsive : écrans moyens (tablettes) */
+@media (max-width: 768px) {
+    .main-container {
+        width: 60vw;
+        padding: 4vw;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+}
+
+/* Responsive : petits écrans (mobiles) */
+@media (max-width: 480px) {
+    .main-container {
+        width: 40vw;
+        padding: 4vw;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    #sendEmailButton {
+        font-size: 0.9rem;
+        padding: 0.6rem;
+    }
+}
+
 
 /* Media Queries pour la responsivité */
 
@@ -288,6 +309,10 @@ a {
         flex-direction: column; /* Empile les boutons verticalement */
         align-items: center; /* Centre les boutons */
     }
+
+    .main-container {
+        margin-top: 1400px;
+    }
 }
 
 /* Écrans de largeur maximale de 768px (petites tablettes et grands téléphones) */
@@ -307,13 +332,20 @@ a {
     }
 
     .tab-container {
-        flex-direction: column; /* Empile les éléments */
-        align-items: center; /* Centre les éléments */
+        flex-direction: row; /* Les onglets sont sur une seule ligne */
+        flex-wrap: wrap; /* Permet aux onglets de passer à la ligne suivante */
+        justify-content: center; /* Centre tous les onglets */
+        width: 100%; /* Occupe toute la largeur disponible */
     }
 
     .tab-button {
         padding: 10px 15px; /* Réduit la taille des boutons */
         font-size: 14px; /* Réduit la taille de la police */
+        margin-bottom: 10px; /* Ajoute de l'espace entre les lignes */
+        width: 45%; /* Chaque bouton occupe environ la moitié de la largeur */
+    }
+    .main-container {
+        margin-top: 1200px;
     }
 }
 
@@ -345,4 +377,6 @@ a {
         font-size: 16px; /* Réduit la taille de la police */
         margin-bottom: 10px; /* Ajoute de l'espace entre les lignes */
     }
-}
+    .main-container {
+        margin-top: 1200px;
+    }
