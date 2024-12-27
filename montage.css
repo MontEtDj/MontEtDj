@@ -315,4 +315,7 @@ h3 {
             padding: 0 10px; /* Ajout de marges internes pour un meilleur espacement */
             text-align: justify; /* Alignement pour une meilleure lisibilité */
         }
+        html, body {
+            overflow-x: hidden; /* Cache le débordement horizontal */
+        }
 }
