@@ -263,8 +263,10 @@ a {
     }
 
     .tab-container {
-        flex-direction: column; /* Empile les boutons verticalement */
-        align-items: center; /* Centre les boutons */
+        flex-direction: row; /* Les onglets sont sur une seule ligne */
+        flex-wrap: wrap; /* Permet aux onglets de passer à la ligne suivante */
+        justify-content: center; /* Centre tous les onglets */
+        width: 100%; /* Occupe toute la largeur disponible */
     }
 }
 
@@ -285,13 +287,17 @@ a {
     }
 
     .tab-container {
-        flex-direction: column; /* Empile les éléments */
-        align-items: center; /* Centre les éléments */
+        flex-direction: row; /* Les onglets sont sur une seule ligne */
+        flex-wrap: wrap; /* Permet aux onglets de passer à la ligne suivante */
+        justify-content: center; /* Centre tous les onglets */
+        width: 100%; /* Occupe toute la largeur disponible */
     }
 
     .tab-button {
         padding: 10px 15px; /* Réduit la taille des boutons */
         font-size: 14px; /* Réduit la taille de la police */
+        margin-bottom: 10px; /* Ajoute de l'espace entre les lignes */
+        width: 45%; /* Chaque bouton occupe environ la moitié de la largeur */
     }
 }
 
@@ -322,5 +328,16 @@ a {
         padding: 10px 12px; /* Réduit la taille des boutons */
         font-size: 16px; /* Réduit la taille de la police */
         margin-bottom: 10px; /* Ajoute de l'espace entre les lignes */
+    }
+
+    /* Pour les éléments de service */
+    .service-grid {
+        flex-direction: column; /* Empile les éléments de service verticalement */
+        align-items: center; /* Centre les éléments */
+    }
+
+    .service-item {
+        max-width: 100%; /* Les éléments de service occupent toute la largeur */
+        margin-bottom: 20px; /* Ajoute un espace entre les éléments */
     }
 }
