@@ -351,6 +351,7 @@ a {
         padding: 10px 15px; /* Réduit la taille des boutons */
         font-size: 14px; /* Réduit la taille de la police */
     }
+    
 }
 
 /* Écrans de largeur maximale de 480px (téléphones) */
@@ -380,9 +381,5 @@ a {
         padding: 10px 12px; /* Réduit la taille des boutons */
         font-size: 16px; /* Réduit la taille de la police */
         margin-bottom: 10px; /* Ajoute de l'espace entre les lignes */
-    }
-
-    html, body {
-        overflow-x: hidden; /* Cache le débordement horizontal */
     }
 }
