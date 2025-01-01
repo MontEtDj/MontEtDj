@@ -304,30 +304,30 @@ a {
 /* Écrans de largeur maximale de 480px (téléphones) */
 @media (max-width: 480px) {
     .banniere {
-        padding: 10px; /* Moins de padding pour les très petits écrans */
+        padding: 10px;
     }
 
     .logo {
-        width: 50px; /* Taille réduite du logo */
+        width: 50px;
     }
 
     .nom {
-        width: 70px; /* Ajuste la largeur du texte */
-        text-align: center; /* Centre le texte */
+        width: 70px;
+        text-align: center;
     }
 
     .tab-container {
-        flex-direction: row; /* Les onglets sont sur une seule ligne */
-        flex-wrap: wrap; /* Permet aux onglets de passer à la ligne suivante */
-        justify-content: center; /* Centre tous les onglets */
-        width: 100%; /* Occupe toute la largeur disponible */
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
     }
 
     .tab-button {
-        width: 45%; /* Chaque bouton occupe environ la moitié de la largeur */
-        padding: 10px 12px; /* Réduit la taille des boutons */
-        font-size: 16px; /* Réduit la taille de la police */
-        margin-bottom: 10px; /* Ajoute de l'espace entre les lignes */
+        width: 45%;
+        padding: 10px 12px;
+        font-size: 16px;
+        margin-bottom: 10px;
     }
 
     /* Pour les éléments de service */
