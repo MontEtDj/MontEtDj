@@ -18,16 +18,16 @@ html, body {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #fcfcfc; /* Couleur de fond de la bannière */
+    background-color: #fcfcfc;
     display: flex;
-    align-items: center; /* Centrer le contenu verticalement */
-    height: 100px; /* Hauteur de la bannière */
-    z-index: 10; /* S'assurer que la bannière est au-dessus du reste */
+    align-items: center;
+    height: 100px;
+    z-index: 10;
 }
 
 /* Logo dans la bannière */
 .logo {
-    width: 60px; /* Taille du logo */
+    width: 60px;
     height: auto;
     margin-left: 80px;
     margin-bottom: 10px;
@@ -35,7 +35,7 @@ html, body {
 
 /* Nom de l'entreprise dans la bannière */
 .nom {
-    width: 90px; /* Taille du logo */
+    width: 90px;
     height: auto;
     margin-left: -30px;
     margin-right: 80px;
@@ -56,7 +56,7 @@ html, body {
     cursor: pointer;
     border-radius: 5px;
     position: relative;
-    transition: color 0.3s ease; /* Transition pour la couleur du texte */
+    transition: color 0.3s ease;
 }
 
 .tab-button::after {
@@ -276,6 +276,13 @@ a {
 
 /* Media Queries pour la responsivité */
 
+
+/* Écrans de largeur maximale de 2560px (ordinateur fixe) */
+@media (max-width: 2560px) {
+    .main-container{
+        margin-top: 1300px;
+    }
+}
 /* Écrans de largeur maximale de 1024px (tablettes) */
 @media (max-width: 1024px) {
     .banniere {
@@ -299,31 +306,19 @@ a {
     }
 
     .tab-container {
-        flex-direction: column; /* Empile les boutons verticalement */
-        align-items: center; /* Centre les boutons */
+        flex-direction: row; /* Les onglets sont sur une seule ligne */
+        flex-wrap: wrap; /* Permet aux onglets de passer à la ligne suivante */
+        justify-content: center; /* Centre tous les onglets */
+        width: 100%; /* Occupe toute la largeur disponible */
     }
 
     .main-container {
-        margin-top: 100vh; /* Ajuste l'espace au-dessus du formulaire */
+        margin-top: 1400px; /* Ajuste l'espace au-dessus du formulaire */
     }
 }
 
 /* Écrans de largeur maximale de 768px (petites tablettes et grands téléphones) */
 @media (max-width: 768px) {
-    .main-container {
-        width: 60vw;
-        padding: 4vw;
-    }
-
-    h1 {
-        font-size: 1.8rem;
-    }
-
-    #sendEmailButton {
-        font-size: 0.9rem;
-        padding: 0.6rem;
-    }
-
     .banniere {
         padding: 20px; /* Un peu plus de padding pour les petits écrans */
         height: auto; /* La hauteur s'ajuste automatiquement */
@@ -352,8 +347,17 @@ a {
         width: 45%; /* Chaque bouton occupe environ la moitié de la largeur */
     }
 
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    #sendEmailButton {
+        font-size: 0.9rem;
+        padding: 0.6rem;
+    }
+
     .main-container {
-        margin-top: 1600px;
+        margin-top: 1550px;
     }
 }
 
@@ -389,4 +393,40 @@ a {
     .main-container {
         margin-top: 1500px;
     }
+}
+
+@media (min-height: 780px) {
+    .main-container{
+        margin-top: 1000px;
+    }
+}
+@media (min-height: 860px) {
+    .main-container{
+            margin-top: 850px;
+        }
+    }
+
+
+@media (min-height: 970px) {
+    .main-container{
+            margin-top: 750px;
+        }
+}
+
+@media (min-height: 1100px) {
+    .main-container{
+            margin-top: 650px;
+        }
+}
+
+@media (min-height: 1200px) {
+    .main-container{
+            margin-top: 500px;
+        }
+}
+
+@media (min-height: 1300px) {
+    .main-container{
+            margin-top: 350px;
+        }
 }
