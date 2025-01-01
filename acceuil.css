@@ -230,6 +230,22 @@ a {
     transform: rotate(180deg);
 }
 
+/* Section vidéo */
+
+
+
+.video-container {
+    text-align: center; /* Centrer le texte à l'intérieur du conteneur */
+}
+
+.video-container video {
+    max-width: 60%; /* La vidéo occupe jusqu'à 60% de la largeur du conteneur */
+    height: auto; /* La hauteur s'ajuste automatiquement en fonction de la largeur */
+    margin: 60px auto 0; /* Marge supérieure de 60px et centrage horizontal avec 'auto' */
+    display: block; /* Bloque l'élément vidéo pour pouvoir appliquer 'auto' aux marges */
+}
+
+
 /* Media Queries pour la responsivité */
 
 /* Écrans de largeur maximale de 1024px (tablettes) */
