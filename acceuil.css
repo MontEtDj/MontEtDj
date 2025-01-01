@@ -7,45 +7,37 @@ body {
     font-family: "Roboto", sans-serif;
 }
 
+/* Section Banniere */
 .banniere {
-    background-color: #fcfcfc; /* Couleur de fond */
+    background-color: #fcfcfc;
     display: flex;
-    align-items: center; /* Centre le contenu verticalement */
-    height: 100px; /* Hauteur de la bannière */
-    justify-content: space-between; /* Espace entre les éléments */
-    padding: 10px 20px; /* Ajoute un peu d'espace intérieur */
-    flex-wrap: wrap; /* Permet au contenu de se replier sur plusieurs lignes si nécessaire */
+    align-items: center;
+    height: 100px;
 }
 
+/* Style pour le logo */
 .logo {
-    width: 60px; /* Taille du logo */
+    width: 60px;
     height: auto;
     margin-left: 80px;
     margin-bottom: 10px;
-    max-width: 100%; /* Garantit que l'image ne dépasse pas */
 }
 
+/* Style pour le nom de l'entreprise */
 .nom {
-    width: 90px; /* Taille du logo */
+    width: 90px;
     height: auto;
     margin-left: -30px;
     margin-right: 80px;
-    max-width: 100%; /* Garantit que le texte ne dépasse pas */
 }
 
+/* Container des onglets */
 .tab-container {
     display: flex;
-    justify-content: flex-start; /* Aligne les onglets à gauche */
-    align-items: center; /* Centre les onglets verticalement */
-    gap: 20px; /* Espace entre les onglets */
-    max-width: 800px; /* Limite la largeur du conteneur des onglets */
-    width: 100%; /* Utilise toute la largeur disponible */
-    margin-left: 0; /* Aucun décalage à gauche */
-    margin-right: auto; /* Force les onglets à se centrer à gauche */
-    flex-wrap: wrap; /* Permet aux onglets de passer à la ligne */
+    margin: 0px 20px;
 }
 
-/* Style pour les boutons d'onglet */
+/* Boutons des onglets */
 .tab-button {
     background-color: transparent;
     font-size: 15px;
@@ -55,7 +47,7 @@ body {
     cursor: pointer;
     border-radius: 5px;
     position: relative;
-    transition: color 0.3s ease; /* Transition pour la couleur du texte */
+    transition: color 0.3s ease;
 }
 
 .tab-button::after {
