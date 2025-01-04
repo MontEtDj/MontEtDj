@@ -7,6 +7,7 @@ html, body {
     margin: 0;
     padding: 0;
     width: 100%; /* S'assure que la largeur est toujours égale à celle de l'écran */
+    font-family: "Roboto", sans-serif;
 }
 
 
@@ -63,13 +64,11 @@ a {
     margin-right: 80px;
 }
 
-/* Container des onglets */
 .tab-container {
     display: flex;
     margin: 0px 20px;
 }
 
-/* Boutons des onglets */
 .tab-button {
     background-color: transparent;
     font-size: 15px;
@@ -112,6 +111,7 @@ a {
     height: 100vh;
     object-fit: cover;
     z-index: -1;
+    pointer-events: auto; /* Peut être désactivé avec JS lorsque le menu est ouvert */
 }
 
 /* Section Hero */
@@ -187,7 +187,7 @@ a {
     background-color: #fff;
     min-width: 160px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1;
+    z-index: 10; /* Assure que le menu est au-dessus de la vidéo */
     border-radius: 4px;
     text-align: left;
 }
@@ -363,6 +363,7 @@ h3 {
         font-size: 16px;
         margin-bottom: 10px;
     }
+
     #hero h1 {
         font-size: 40px;
     }
@@ -400,4 +401,5 @@ h3 {
     .footer {
         font-size: 12px;
     }
+    
 }
