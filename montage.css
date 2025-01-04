@@ -1,18 +1,7 @@
-/* Appliquer box-sizing: border-box à tous les éléments pour éviter les débordements */
-*, *::before, *::after {
-    box-sizing: border-box;
+body {
     margin: 0;
     padding: 0;
-}
-
-/* Réinitialiser les marges et padding pour le body et html */
-html, body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
     font-family: "Roboto", sans-serif;
-    overflow-x: hidden; /* Empêche le défilement horizontal */
 }
 
 /* Section de contact */
@@ -21,7 +10,6 @@ html, body {
     background-color: #333;
     color: white;
     text-align: center;
-    width: 100%;
 }
 
 .contact h2 {
@@ -39,14 +27,13 @@ html, body {
     color: white;
     text-align: center;
     padding: 20px 0;
-    width: 100%;
 }
 
-/* Liens */
 a {
     text-decoration: none;
 }
 
+/* Section Banniere */
 .banniere {
     background-color: #fcfcfc;
     display: flex;
@@ -70,11 +57,13 @@ a {
     margin-right: 80px;
 }
 
+/* Container des onglets */
 .tab-container {
     display: flex;
     margin: 0px 20px;
 }
 
+/* Boutons des onglets */
 .tab-button {
     background-color: transparent;
     font-size: 15px;
@@ -86,7 +75,6 @@ a {
     position: relative;
     transition: color 0.3s ease;
 }
-
 
 .tab-button::after {
     content: '';
@@ -127,7 +115,12 @@ a {
     color: rgb(255, 255, 255);
     position: relative;
     z-index: 1;
-    width: 100%;
+}
+
+#hero h1 {
+    font-size: 80px;
+    margin-bottom: -10px;
+    font-family: fantas;
 }
 
 /* Liste des services */
@@ -135,7 +128,6 @@ a {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    width: 100%;
 }
 
 .service-item {
@@ -155,11 +147,21 @@ a {
     padding: 15px 10px;
     text-align: center;
     background-color: #f1f1f1;
-    width: 100%;
+}
+
+#services h2 {
+    font-size: 40px;
+    font-family: Bunge Spice;
+}
+
+#services p {
+    font-size: 23px;
+    font-family: Bung Spice;
 }
 
 .service-description p {
-    font-size: 18px;
+    font-size: 30px;
+    font-family: Ga Mamli;
     margin-bottom: 30px;
     color: #333;
     width: 800px;
@@ -199,28 +201,6 @@ a {
     transform: rotate(180deg);
 }
 
-/* Taille des titres */
-h1 {
-    font-size: 80px;
-    margin-bottom: -10px;
-    font-family: fantas;
-}
-
-.service-description p {
-    font-size: 30px;
-    font-family: Ga Mamli;
-}
-
-#services h2 {
-    font-size: 40px;
-    font-family: Bunge Spice;
-}
-
-#services p {
-    font-size: 23px;
-    font-family: Bung Spice;
-}
-
 h3 {
     font-size: 30px;
 }
@@ -256,9 +236,26 @@ h3 {
         width: 100%; /* Occupe toute la largeur disponible */
     }
 
+
+    #hero h1 {
+        font-size: 60px;
+    }
+
+    .service-item {
+        width: 45%;
+    }
+
     .service-description p {
         font-size: 20px;
-        width: 600px; /* Réduction de la largeur */
+        width: 600px;
+    }
+
+    #services h2 {
+        font-size: 35px;
+    }
+
+    #services p {
+        font-size: 20px;
     }
 }
 
@@ -292,11 +289,34 @@ h3 {
         width: 45%; /* Chaque bouton occupe environ la moitié de la largeur */
     }
 
+    #hero h1 {
+        font-size: 45px;
+    }
+
+    .service-item {
+        width: 100%;
+    }
+
+    .tab-button {
+        padding: 10px 15px;
+        font-size: 14px;
+        margin-bottom: 10px;
+        width: 45%;
+    }
+
     .service-description p {
         font-size: 18px;
-        width: 90%; /* Ajustement pour occuper la majorité de l'écran */
+        width: 90%;
         margin-left: auto;
         margin-right: auto;
+    }
+
+    #services h2 {
+        font-size: 30px;
+    }
+
+    #services p {
+        font-size: 18px;
     }
 }
 
@@ -328,11 +348,37 @@ h3 {
         font-size: 16px;
         margin-bottom: 10px;
     }
+    #hero h1 {
+        font-size: 30px;
+    }
+
+    .service-item {
+        width: 100%;
+    }
+
+    .tab-button {
+        width: 45%;
+        padding: 10px 12px;
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
 
     .service-description p {
         font-size: 16px;
-        width: 100%; /* Utilisation de toute la largeur */
-        padding: 0 10px; /* Ajout de marges internes pour un meilleur espacement */
-        text-align: justify; /* Alignement pour une meilleure lisibilité */
+        width: 100%;
+        padding: 0 10px;
+        text-align: justify;
+    }
+
+    #services h2 {
+        font-size: 24px;
+    }
+
+    #services p {
+        font-size: 16px;
+    }
+
+    .footer {
+        font-size: 12px;
     }
 }
