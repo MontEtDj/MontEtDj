@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
             };
 
             // Envoie l'e-mail via EmailJS
-            emailjs.send('service_hk4o8l2', 'template_x9xee09', templateParams)
+            emailjs.send('service_uau6zwe', 'template_x9xee09', templateParams)
                 .then((response) => {
                     console.log('SUCCESS!', response.status, response.text);
                     alert('Informations envoyées avec succès !');
